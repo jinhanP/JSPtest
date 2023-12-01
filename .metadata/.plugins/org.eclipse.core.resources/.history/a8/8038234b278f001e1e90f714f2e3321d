@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="http://localhost:8080/jsptest/Source?age=10">call Source Servlet</a>
+	//자기가 보내는거
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="http://localhost:8080/jsptest/directive/errinvoke.jsp?name=pjh" >errorinvoke</a>
+	<!--<form action="Source" method="get">
+		<input type="text" name="age" value="">
+		<input type="submit" value="call Source Servlet">
+	</form>-->
+	<!--자기가 클릭해서 서버로 이동-->
+</body>
+</html>

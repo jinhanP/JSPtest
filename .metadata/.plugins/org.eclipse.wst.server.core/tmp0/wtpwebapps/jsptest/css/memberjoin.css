@@ -1,0 +1,43 @@
+@charset "UTF-8";
+h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: greenyellow;
+  font-size: 100px;
+}
+table{
+  border: none;
+  display: flex;
+  justify-content: center;
+  height: 550px;
+}
+
+td > input{
+  size: 30px;
+}
+
+#idCheck{
+  color: red;
+  font-size: 0.8em;
+  display: none;
+}
+
+#pwCheck{
+  color: red;
+  font-size: 0.8em;
+  display: none;
+}
+
+#nameCheck{
+  color: red;
+  font-size: 0.8em;
+  display: none;
+  color: green;
+}
+
+#emailCheck{
+  color: red;
+  font-size: 0.8em;
+  display: none;
+}
