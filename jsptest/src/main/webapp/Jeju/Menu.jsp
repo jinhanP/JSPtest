@@ -245,6 +245,7 @@ function check() {
 
 }
 
+
 </script>
 
 
@@ -253,9 +254,9 @@ function check() {
 	<div id="container">  
 	 <div id="slideShow"> 
       <div id="slides"> 
-        <img src="../09.image/image/01.jpg" alt=""> 
-        <img src="../09.image/image/03.jpg" alt=""> 
-        <img src="../09.image/image/04.jpg" alt=""> 
+        <img src="img/photo-1.jpg" alt=""> 
+        <img src="img/photo-2.jpg" alt=""> 
+        <img src="img/photo-3.jpg" alt=""> 
         <button id="prev" onclick="prevSlide()">&lang;</button> 
         <button id="next" onclick="nextSlide()">&rang;</button> 
       </div> 
@@ -276,16 +277,16 @@ function check() {
     <div id="gallery" class="tabContent"> 
     <h2>갤러리 내용입니다.</h2> 
     <ul> 
-        <li><img src="../bootstrap/img/img-1.jpg"></li> 
-        <li><img src="../bootstrap/img/img-2.jpg"></li> 
-        <li><img src="../bootstrap/img/img-3.jpg"></li> 
-        <li><img src="../bootstrap/img/img-1.jpg"></li> 
-        <li><img src="../bootstrap/img/img-2.jpg"></li> 
-        <li><img src="../bootstrap/img/img-3.jpg"></li>  
+        <li><img src="img/img-1.jpg"></li> 
+        <li><img src="img/img-2.jpg"></li> 
+        <li><img src="img/img-3.jpg"></li> 
+        <li><img src="img/img-1.jpg"></li> 
+        <li><img src="img/img-2.jpg"></li> 
+        <li><img src="img/img-3.jpg"></li>  
     </ul> 
     </div>  
     </div> 
-    <form method='post' action='LoginCheck'>
+    <form method='post' action='/jsptest/LoginCheck'>
       <table border='1' width='300'>
       <tr>
       <th width='100'>아이디</th>
@@ -297,7 +298,7 @@ function check() {
       </tr>
     <tr>
       <td align='center' colspan='2'>
-      <a href='bbs/memberjoin.html'>회원가입</a>
+      <a href='/jsptest/bbs/memberjoin2.html'>회원가입</a>
       <input type='submit' value='로그인'>
       </td>
       </tr>

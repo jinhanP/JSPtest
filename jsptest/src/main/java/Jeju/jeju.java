@@ -42,7 +42,8 @@ public class jeju extends HttpServlet {
 				 out.println("</body>");
 				 out.println("</html>");
 				 }else{
-				 out.println("<link rel='stylesheet' href='../css/jeju.css'>");
+//				 out.println("<link rel='stylesheet' href='jeju.css?ver=1'>");
+//				 out.println("<link rel='stylesheet' type='text/css'href='${pageContext.request.contextPath}/css/jeju.css?ver=1'>");
 				 out.println("<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css'rel='stylesheet'/>");
 				 out.println("<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'></script>");
 				 out.println("<html>");

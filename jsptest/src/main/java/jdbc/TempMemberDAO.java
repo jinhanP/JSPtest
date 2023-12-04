@@ -11,22 +11,39 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Vector;
+import java.sql.*;
+import javax.sql.*;
+import javax.naming.*;
+import java.util.*;
 
 public class TempMemberDAO  {
 	
   
     public void tempMemberDAO() {}
     
-    
+    public Connection getConnection() {
+    	Connection conn = null;
+    	try{
+    	 Context init = new InitialContext();
+    	 DataSource ds = (DataSource)init.lookup("java:comp/env/jdbc/myOracle");
+    	 conn = ds.getConnection();
+    	}catch(Exception e){
+    	 System.err.println("Connection 생성실패");
+    	}
+    	return conn;
+    	}
+    	
+
     public Vector<TempMemberVO> getMemberList() {
-    ConnectionPool pool = null;
+//    ConnectionPool pool = null;
     Connection conn = null;
     Statement stmt = null;
     ResultSet rs = null;
     Vector<TempMemberVO> vecList = new Vector<TempMemberVO>();
     try {
-             pool = ConnectionPool.getInstance();
-             conn = pool.getConnection();
+//             pool = ConnectionPool.getInstance();
+//             conn = pool.getConnection();
+             conn = this.getConnection();
              String strQuery = "select * from tempMember";
              stmt = conn.createStatement();
              rs = stmt.executeQuery(strQuery);
