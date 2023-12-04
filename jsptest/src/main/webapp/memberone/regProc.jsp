@@ -13,7 +13,7 @@ pageEncoding="UTF-8"%>
 <link href="style.css" rel="stylesheet" type="text/css">
 <body bgcolor="#FFFFCC">
 <br></br>
-<center>
+
 <%
 if(flag){
 	 out.println("<b>회원가입을 축하 드립니다.</b><br/>");
@@ -23,6 +23,6 @@ if(flag){
 	 out.println("<a href=regForm.jsp>다시 가입</a>");
 }
 %>
-</center>
+
 </body>
 </html>

@@ -14,7 +14,7 @@
 </head>
 <body bgcolor = "#FFFFCC">
 <br>
-<center>
+
 <b><%=id%></b>
 <%
 	if(check){
@@ -24,6 +24,6 @@
 	}
 %>
 <a href="#" onClick="javascript:self.close()">닫기</a>
-</center>
+
 </body>
 </html>
