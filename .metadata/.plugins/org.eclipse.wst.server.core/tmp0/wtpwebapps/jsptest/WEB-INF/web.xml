@@ -157,4 +157,14 @@
     <servlet-name>TempMemberDAO</servlet-name>
     <url-pattern>/TempMemberDAO</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>jeju</display-name>
+    <servlet-name>jeju</servlet-name>
+    <servlet-class>Jeju.jeju</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jeju</servlet-name>
+    <url-pattern>/jeju</url-pattern>
+  </servlet-mapping>
 </web-app>
