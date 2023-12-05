@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>   
+<%
+ String loginID = (String)session.getAttribute("loginID");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +16,7 @@
 	<h1>미래IT</h1>
 <div class="container" id="container">
   <div class="form-container sign-up-container">
-    <form action="#">
+    <form action="loginProc.jsp">
       <h1>Create Account</h1>
       <div class="social-container">
         <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -34,7 +37,7 @@
       <span>or use your account</span>
       
       <form method="post" action="#">
-    <table width="300"  border-radius=20%;>
+    <table width="300" border-radius=20%;>
       <tr>
         <td align="center" width="100">아이디</td>
         <td width="200">&nbsp;&nbsp;<input type="text" name="id" size="20"></td>

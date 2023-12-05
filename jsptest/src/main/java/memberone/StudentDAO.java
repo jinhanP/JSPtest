@@ -103,5 +103,31 @@ public class StudentDAO {
 		 }
 		 return vecList;
 		}
+	
+	public int loginCheck(String id, String pass) {
+		 Connection conn = null;
+		 PreparedStatement pstmt = null;
+		 ResultSet rs = null;
+		 int check = -1;
+		 try {
+		conn = getConnection();
+		String strQuery = "select pass from student where id = ?";
+		pstmt = conn.prepareStatement(strQuery);
+		pstmt.setString(1,id);
+		rs = pstmt.executeQuery();
+		if(rs.next()){
+		String dbPass = rs.getString("pass");
+		if(pass.equals(dbPass)) check = 1;
+		else check = 0;
+		}
+		 }catch(Exception ex) {
+		System.out.println("Exception" + ex);
+		 }finally{
+		if(rs != null)try{rs.close();}catch(SQLException sqle1){}
+		if(pstmt != null)try{pstmt.close();}catch(SQLException sqle2){}
+		if(conn != null)try{conn.close();}catch(SQLException sqle3){}
+		 }
+		 return check;
+		}
 
 }
