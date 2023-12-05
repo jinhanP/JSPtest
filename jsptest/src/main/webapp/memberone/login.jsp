@@ -16,7 +16,7 @@
 	<h1>미래IT</h1>
 <div class="container" id="container">
   <div class="form-container sign-up-container">
-    <form action="loginProc.jsp">
+    <form action="#">
       <h1>Create Account</h1>
       <div class="social-container">
         <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -27,7 +27,7 @@
   </div>
   
   <div class="form-container sign-in-container">
-    <form action="#">
+    <form method="post" action="loginProc.jsp">
       <h1>Sign in</h1>
       <div class="social-container">
         <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -36,8 +36,10 @@
       </div>
       <span>or use your account</span>
       
-      <form method="post" action="#">
-    <table width="300" border-radius=20%;>
+  <% //로그인 했을 때 세션을 만들어서 로그인 성공했는지 알 수있다.
+  if(loginID == null){
+	  %>
+	  <table >
       <tr>
         <td align="center" width="100">아이디</td>
         <td width="200">&nbsp;&nbsp;<input type="text" name="id" size="20"></td>
@@ -54,7 +56,30 @@
       </tr>
     </table>
   </form>
- </form>
+	  
+	  <%
+  }else{
+  %>
+    <h3>미래IT에 오신 걸 환영합니다.</h3>
+    
+     <%} %>
+<% if(loginID != null){ %>
+	<table border="1" width="300">
+			<tr><td colspan="3" align="center">
+				<%=loginID %>님 환영합니다.</td></tr>
+			<tr>
+		<td align="center" width="100">
+			<a href="modifyForm.jsp">정보수정</a></td>
+		<td align="center" width="100">
+			<a href="deleteForm.jsp">회원탈퇴</a></td>
+		<td align="center" width="100">
+			<a href="logout.jsp">로그아웃</a></td>
+	</tr>
+</table>
+<%}else{ %>
+<!-- 기존의 login.jsp 페이지의 내용 -->
+<% } %>
+
   </div>
   <div class="overlay-container">
     <div class="overlay">

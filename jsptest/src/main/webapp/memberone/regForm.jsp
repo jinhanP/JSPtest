@@ -5,8 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Register Form</title>
-<script language="javascript" src="script.js"></script>
-<link href="style.css" rel="stylesheet" type="text/css"/>
+<script lang="javascript" src="script.js"></script>
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -40,7 +39,8 @@
           <select name="phone1">
             <option value="02">02</option>
             <option value="010">010</option>
-          <td><input type="text" name="phone2" size="5"></td>
+          <td><input type="text" name="phone2" size="5">-
+          <input type="text" name="phone3" size="5"></td>
           </select>
         </td>
       </tr>
@@ -56,7 +56,7 @@
       </tr>
       <tr>
         <td align="right">주소</td>
-        <td><input type="text" name="address1" size="50"></td>
+        <td><input type="text" name="address1" size="30"></td>
       </tr>
       <tr>
         <td align="right">상세주소</td>
@@ -64,13 +64,12 @@
       </tr>
       <tr>
         <td colspan="2" align="center">&nbsp;
-          <input type="button" value="회원가입" onclick="inputCheck()">&nbsp;
+          <input type="submit" value="회원가입" onclick="inputCheck()">&nbsp;
           <input type="reset" value="다시입력">
         </td>
       </tr>
     </table>
   </form>
-      </form>
       </div>
 </body>
 </html>

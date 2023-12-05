@@ -13,7 +13,15 @@ public class ZipCodeVO {
 	private String sido;
 	private String gugun;
 	private String dong;
+	private String ri;
 	private String bunji;
+	
+	public String getRi() {
+		return ri;
+	}
+	public void setRi(String ri) {
+		this.ri = ri;
+	}
 	public String getZipcode() {
 	return zipcode;
 	}
@@ -44,6 +52,7 @@ public class ZipCodeVO {
 	public void setBunji(String bunji) {
 	this.bunji = bunji;
 	}
+	
 	public Vector<ZipCodeVO> zipcodeRead(String dong) {
 		 Connection conn = null;
 		 PreparedStatement pstmt = null;
@@ -61,6 +70,7 @@ public class ZipCodeVO {
 		tempZipcode.setSido(rs.getString("sido"));
 		tempZipcode.setGugun(rs.getString("gugun"));
 		tempZipcode.setDong(rs.getString("dong"));
+		tempZipcode.setRi(rs.getString("ri"));
 		tempZipcode.setBunji(rs.getString("bunji"));
 		vecList.addElement(tempZipcode);
 		}
