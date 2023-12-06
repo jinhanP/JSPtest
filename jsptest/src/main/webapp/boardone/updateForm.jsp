@@ -9,6 +9,7 @@
 <link href="boardone.css" rel="stylesheet" type="text/css">
 <script lang="JavaScript" src="script.js"></script>
 </head>
+
 <%
  int num = Integer.parseInt(request.getParameter("num"));
 	 String pageNum = request.getParameter("pageNum");
