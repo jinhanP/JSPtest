@@ -19,8 +19,9 @@ if(request.getParameter("num")!=null){
 		depth = Integer.parseInt(request.getParameter("depth"));
 }
 %>
+
 <body bgcolor="<%=bodyback_c %>">
-<center><b>글쓰기</b></center><br></br>
+<center><h1>글쓰기</h1></center><br></br>
 <form method="post" name="writeForm" action="writeProc.jsp"onsubmit="return writeSave()">
 	<input type="hidden" name="num" value="<%=num%>">
 	<input type="hidden" name="ref" value="<%=ref%>">
@@ -47,17 +48,17 @@ if(request.getParameter("num")!=null){
 <tr>
  <td width="70" bgcolor="<%=value_c %>" align="center">제목</td>
  <td width="330">
-<input type="text" size="50" maxlength="50" name="subject"/>
- </td>
-</tr>
-<tr>
- <td width="70" bgcolor="<%=value_c %>" align="center">제목</td>
- <td width="330">
  <%if(request.getParameter("num")==null){%>
  <input type="text" size="50" maxlength="50" name="subject"/>
 <%}else{%>
  <input type="text" size="50" maxlength="50" name="subject" value="[답변]"/>
  <%}%>
+ </td>
+</tr>
+<tr>
+ <td width="70" bgcolor="<%=value_c %>" align="center">내용</td>
+ <td width="330">
+<textarea name="content" rows="13" cols="50"></textarea>
  </td>
 </tr>
 <tr>
@@ -68,10 +69,9 @@ if(request.getParameter("num")!=null){
 </tr>
 <tr>
  <td colspan="2" bgcolor="<%=value_c %>" align="center">
-<input type="submit" value="글쓰기"/>
-<input type="reset" value="다시작성"/>
-<input type="button" value="목록"
-onClick="window.location='list.jsp'">
+	<input type="submit" value="글쓰기"/>
+	<input type="reset" value="다시작성"/>
+	<input type="button" value="목록" onClick="window.location='list.jsp'">
  </td>
 </tr>
 </table>

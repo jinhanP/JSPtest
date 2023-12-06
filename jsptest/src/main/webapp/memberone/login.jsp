@@ -64,7 +64,7 @@
     
      <%} %>
 <% if(loginID != null){ %>
-	<table border="1" width="300">
+	<table border="1" width="200">
 			<tr><td colspan="3" align="center">
 				<%=loginID %>님 환영합니다.</td></tr>
 			<tr>

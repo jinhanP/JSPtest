@@ -18,6 +18,7 @@
         <li><a href="#">개인정보처리방침</a></li> 
         <li><a href="#">여행약관</a></li>
          <li><a href="#">사이트맵</a></li> 
+  </ul> 
   <div id="sns"> 
   <ul> 
           <li><a href="#"><img src="img/sns-1.png"></a></li> 
@@ -25,18 +26,12 @@
           <li><a href="#"><img src="img/sns-3.png"></a></li> 
   </ul> 
   </div> 
-  </ul> 
   </div> 
   <div id="company"> 
         <p>제주특별자치도 ***동 ***로 *** (대표전화) 123-456-7890</p> 
   </div>  
   </footer>  
   </div>
-  <script src="./style.js?ver=20231128"></script>
-  <!-- ?ver=20231128 값만 바뀌면 됨-->
-  </div>
-  <script src="./style.js?ver=20231128"></script>
-  <!-- ?ver=20231128 값만 바뀌면 됨-->
 </body>
 <script>
 //객체가 없어서 null 이기떄문에 자바스크립트를 아래쪽 바디에 
