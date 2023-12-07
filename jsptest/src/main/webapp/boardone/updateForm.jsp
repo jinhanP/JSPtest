@@ -21,10 +21,8 @@
 <b>글수정</b>
 <br>
 <form method="post" name="writeform"
-action="updateProc.jsp?pageNum=<%=pageNum%>"
-onsubmit="return writeSave()">
-<table width="400" border="1" cellspacing="0" cellpadding="0"
-bgcolor="<%=bodyback_c%>" align="center">
+action="updateProc.jsp?pageNum=<%=pageNum%>"onsubmit="return writeSave()">
+<table width="400" border="1" cellspacing="0" cellpadding="0"bgcolor="<%=bodyback_c%>" align="center">
  <tr>
  <td width="70" bgcolor="<%=value_c%>" align="center">이 름</td>
  <td align="left" width="330">
@@ -36,14 +34,12 @@ value="<%=article.getNum()%>"></td>
   <tr>
  <td width="70" bgcolor="<%=value_c%>" align="center" >제 목</td>
  <td align="left" width="330">
-<input type="text" size="40" maxlength="50" name="subject"
-value="<%=article.getSubject()%>"></td>
+<input type="text" size="40" maxlength="50" name="subject"value="<%=article.getSubject()%>"></td>
  </tr>
  <tr>
  <td width="70" bgcolor="<%=value_c%>" align="center">Email</td>
  <td align="left" width="330">
-<input type="text" size="40" maxlength="30" name="email"
-value="<%=article.getEmail()%>"></td>
+<input type="text" size="40" maxlength="30" name="email"value="<%=article.getEmail()%>"></td>
  </tr>
  <tr>
  <td width="70" bgcolor="<%=value_c%>" align="center" >내 용</td>

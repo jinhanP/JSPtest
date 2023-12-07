@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ page import = "boardone.BoardDAO" %>
 <%@ page import = "java.sql.Timestamp" %>
-<% request.setCharacterEncoding("euc-kr");%>
 <jsp:useBean id="article" scope="page" class="boardone.BoardVO">
  <jsp:setProperty name="article" property="*"/>
 </jsp:useBean>
@@ -20,10 +19,9 @@ if (numParam != null && !numParam.isEmpty()) {
         e.printStackTrace();
     }
 %>
- <meta http-equiv="Refresh" content=
-"0;url=list.jsp?pageNum=<%=pageNum%>" >
+ <meta http-equiv="Refresh" content="0;url=list.jsp?pageNum=<%=pageNum%>" >
 <% }else{%>
- <script language="JavaScript">
+ <script lang="JavaScript">
  <!--
  alert("비밀번호가 맞지 않습니다");
  history.go(-1);

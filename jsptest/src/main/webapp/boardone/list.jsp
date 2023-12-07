@@ -33,7 +33,7 @@ number=count-(currentPage-1)*pageSize;//수정<4>
 <html>
 <head>
 <title>게시판</title>
-<link href="style.css" rel="stylesheet" type="text/css">
+<link href="boardone.css" rel="stylesheet" type="text/css">
 </head>
 <body bgcolor="<%=bodyback_c%>">
 <b>글목록(전체 글:<%=count%>)</b>
