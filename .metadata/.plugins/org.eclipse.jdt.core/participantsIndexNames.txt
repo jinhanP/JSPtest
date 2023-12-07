@@ -1,9 +1,7 @@
 INDEX VERSION 1.134
-C:\webproject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\636375892.index
+D:\JSP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3323076965.index
 \jsptest\src\main\java
-C:\webproject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2580356690.index
+D:\JSP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2580356690.index
 \jsptest\src\main\java
-C:\webproject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3323076965.index
-\jsptest\src\main\java
-C:\webproject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\791058165.index
+D:\JSP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\636375892.index
 \jsptest\src\main\java
