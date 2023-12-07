@@ -54,3 +54,9 @@ CREATE SEQUENCE board_seq -- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½
  NOMAXVALUE -- ï¿½Ö´ë°ªï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½..
  NOCACHE
  NOCYCLE;
+ 
+ 
+ update board set readcount=readcount+1 where num = 7;
+--  readcount +1 ´õÇÑ°ªÀ» ´Ù½Ã µ¹·ÁÁØ´Ù.
+ SELECT * from BOARD;
+ DROP table BOARD;
