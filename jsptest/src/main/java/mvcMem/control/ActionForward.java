@@ -1,5 +1,5 @@
 package mvcMem.control;
-
+//리턴 페이지(View)와 방식(Redirect, Forward)
 public class ActionForward {
 	private String url;
 	private boolean redirect;
