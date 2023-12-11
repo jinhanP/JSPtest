@@ -1,9 +1,8 @@
 package mvc.control;
 
-import org.apache.catalina.authenticator.SpnegoAuthenticator.AcceptAction;
 
 import mvc.action.Action;
-import mvc.action.IndexAction;
+
 
 public class ActionFactory {
 	//액션 팩토리는 싱글톤으로 만들어준다.
@@ -23,7 +22,7 @@ public class ActionFactory {
 		
 		if(cmd.equals("index")) {
 			//ActionFactory가 어떤걸 찾는지 알았다
-			action = new IndexAction();
+			action =  (Action) new mvcMem.action.IndexAction();
 			
 		}
 		

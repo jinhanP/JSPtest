@@ -1,11 +1,14 @@
 package mvc;
 
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import mvcMem.action2.Action;
+import mvcMem.control2.ActionFactory;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -20,8 +23,7 @@ public class Controller extends HttpServlet {
 	// 멤버변수로 맵을 가져온다.
 	private Map<String, Object> commandMap = new HashMap<String, Object>();
 
-	// 위에 객채가 만들어지면 미리 실행한다.
-	@SuppressWarnings("unchecked")
+	// 우리가 사용되어질 모든 Action 객체가 
 	public void init(ServletConfig config) throws ServletException {
 		// web.xml에서 propertyConfig에 해당하는 init-param의 값을 읽어옴
 		// web-inf에 있는
@@ -69,15 +71,48 @@ public class Controller extends HttpServlet {
 		super();
 	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+		
+		requestPro(request,response);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
 
-		doGet(request, response);
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+
+		requestPro(request,response);
+	}
+	private void requestPro(HttpServletRequest request, HttpServletResponse response) {
+		//요청한 내용을 알아낸다. http://localhost:8080/jsptest/mvcMem/member.di
+		// /mvc/message.di=mvc.MessageProcess
+		String view = null;
+		String command = request.getRequestURI(); // /jsptest/mvcMem/member.di 만 가져온다.
+		String path = request.getContextPath();// /jsptest 만 가져온다.
+		if(command.indexOf(request.getContextPath()) == 0) {
+			command = command.substring(path.length());
+			
+		}
+		//모든자식객체는 => 부모인터페이스로 받을수 있다.
+//		public class MessageProcess implements CommandProcess{}
+//		ActionFactory factory = ActionFactory.getInstance();
+//		Action action = factory.getAction(cmd);
+		CommandProcess com = (CommandProcess) commandMap.get(command);
+		try {
+			 view = com.requestPro(request, response);
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
+		try {
+			dispatcher.forward(request, response);
+		} catch (ServletException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

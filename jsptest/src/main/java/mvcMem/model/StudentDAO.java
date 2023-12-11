@@ -12,8 +12,6 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-import jakarta.servlet.jsp.jstl.sql.Result;
-
 public class StudentDAO {
 	// 데이터 접근 객체 instance
 	private static StudentDAO instance = null;
