@@ -48,10 +48,10 @@ create table BOARD(
      CONSTRAINT "BOARD_PK" PRIMARY KEY ("NUM") ENABLE
 );
 
-CREATE SEQUENCE board_seq -- �������̸�
- START WITH 1 -- ������ 1�� ����
- INCREMENT BY 1 -- �������� 1�� ����
- NOMAXVALUE -- �ִ밪�� ���Ѵ�..
+CREATE SEQUENCE board_seq 
+ START WITH 1 
+ INCREMENT BY 1 
+ NOMAXVALUE 
  NOCACHE
  NOCYCLE;
  
