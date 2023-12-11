@@ -11,6 +11,7 @@
 </head>
 <body>
 	<div class="container">
+	<!-- post 달라고 요청하고 regProc.jsp를 객체로 만들어서 보여달라고 요청  -->
     <form method="post" action="regProc.jsp" name="regForm">
       <h1>회원 가입</h1>
     <table border="1" >
