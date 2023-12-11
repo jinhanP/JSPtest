@@ -180,16 +180,6 @@
     <servlet-class>mvc.control.ControlServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ControlServlet</servlet-name>
-    <url-pattern>/ControlServlet</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>Controller</display-name>
-    <servlet-name>Controller</servlet-name>
-    <servlet-class>mvc.Controller</servlet-class>
-  </servlet>
-  <servlet-mapping>
     <servlet-name>Controller</servlet-name>
     <url-pattern>*.di</url-pattern>
   </servlet-mapping>
@@ -211,14 +201,26 @@
     <servlet-name>myControl</servlet-name>
     <url-pattern>*.mdo</url-pattern>
   </servlet-mapping>
-<!--   <servlet>
+  <servlet>
     <description></description>
-    <display-name>MemControlServlet2</display-name>
-    <servlet-name>MemControlServlet2</servlet-name>
-    <servlet-class>mvcMem.control2.MemControlServlet2</servlet-class>
+    <display-name>ControllerAction</display-name>
+    <servlet-name>ControllerAction</servlet-name>
+    <servlet-class>board.controller.ControllerAction</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>MemControlServlet2</servlet-name>
-    <url-pattern>/MemControlServlet2</url-pattern>
-  </servlet-mapping> -->
+    <servlet-name>ControllerAction</servlet-name>
+    <url-pattern>/ControllerAction</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Controller</servlet-name>
+    <servlet-class>board.controller.ControllerAction</servlet-class>
+    <init-param>
+      <param-name>propertyConfig</param-name>
+      <param-value>CommandPro.properties</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Controller</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
 </web-app>
