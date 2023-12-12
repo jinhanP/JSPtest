@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <script type="text/javascript" src="script.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <title>가입폼</title>
 </head>
 <body>
@@ -43,23 +44,21 @@
 				<td><input type="text" name="email" /></td>
 			</tr>
 			<tr>
-				<td align="right">우편번호 :</td>
-				<td><input type="text" name="zipcode" size="20" />&nbsp; <input
-					type="button" value="찾기" onClick="zipCheck()" /></td>
-			</tr>
+				<tr>
+			<td>
+			<p align="right">우편번호:</p><br />
+			<td>
+			<input type="text" id="sample6_address" placeholder="주소"size="30"><br /> 
+			<input type="text" id="sample6_postcode"placeholder="우편번호" size="30" /><br />
+			<input type="text" id="sample6_detailAddress" placeholder="상세주소" size="30"><br />
+			<input type="text" id="sample6_extraAddress" placeholder="참고항목"size="30"><br /> 
+			<input type="button" onclick="sample6_execDaumPostcode()"value="찾기"></td>
+		</tr>
 			<tr>
-				<td align="right">주소1 :</td>
-				<td><input type="text" name="address1" size="50" /></td>
-			</tr>
-			<tr>
-				<td align="right">주소2 :</td>
-				<td><input type="text" name="address2" size="30" /></td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center"><input type="submit"
-					value="submit" />&nbsp;&nbsp; <input type="button" value="회원가입"
-					onClick="inputCheck()" />&nbsp;&nbsp; <input type="reset"
-					value="다시입력" /></td>
+				<td colspan="2" align="center">
+				&nbsp;&nbsp; 
+				<input type="submit" value="회원가입"onClick="inputCheck()" />&nbsp;&nbsp; 
+				<input type="reset"value="다시입력" /></td>
 			</tr>
 		</table>
 	</form>

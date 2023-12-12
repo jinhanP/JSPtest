@@ -16,8 +16,7 @@ public class RegProcAction implements Action {
 		StudentDAO dao = StudentDAO.getInstance();
 		StudentVO vo = new StudentVO(request.getParameter("id"), request.getParameter("pass"),
 				request.getParameter("name"), request.getParameter("phone1"), request.getParameter("phone2"),
-				request.getParameter("phone3"), request.getParameter("email"), request.getParameter("zipcode"),
-				request.getParameter("address1"), request.getParameter("address2"));
+				request.getParameter("phone3"), request.getParameter("email"));
 		boolean flag = dao.memberInsert(vo);
 		
 		request.setAttribute("flag", flag);

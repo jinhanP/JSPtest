@@ -12,3 +12,29 @@ a:link,a:visited,a:active {
  p{
  font-size:9pt;
  }
+ td{
+  font-size: 20px;
+  color: black;
+  height: 50px;
+   border-collapse: collapse;
+   border:none;
+ }
+ 
+
+ table.container{
+
+  border-collapse: collapse;
+  border-radius: 10px;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px #000;
+ 
+ }
+ 
+ table.co{
+ 
+	border-collapse: collapse;
+  border-radius: 10px;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px #000;
+ }
+

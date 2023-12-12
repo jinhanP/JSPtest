@@ -18,8 +18,7 @@ public class ModifyProcAction implements Action {
 		StudentDAO dao = StudentDAO.getInstance();
 		mvcMem.model2.StudentVO vo = new mvcMem.model2.StudentVO(loginID, request.getParameter("pass"), request.getParameter("name"),
 				request.getParameter("phone1"), request.getParameter("phone2"), request.getParameter("phone3"),
-				request.getParameter("email"), request.getParameter("zipcode"), request.getParameter("address1"),
-				request.getParameter("address2"));
+				request.getParameter("email"));
 		dao.updateMember(vo);
 		return new ActionForward("/mvcMem2/modifyProc.jsp", false);
 	}

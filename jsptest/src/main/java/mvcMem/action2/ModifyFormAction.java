@@ -25,9 +25,6 @@ public class ModifyFormAction implements Action {
 			request.setAttribute("phone2", vo.getPhone2());
 			request.setAttribute("phone3", vo.getPhone3());
 			request.setAttribute("email", vo.getEmail());
-			request.setAttribute("zipcode", vo.getZipcode());
-			request.setAttribute("address1", vo.getAddress1());
-			request.setAttribute("address2", vo.getAddress2());
 			return new ActionForward("/mvcMem2/modifyForm.jsp",false);
 			}
 		}

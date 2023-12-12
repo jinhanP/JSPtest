@@ -7,8 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.border.Border;
-
 public class BoardDAO {
 	private static BoardDAO instance = null;
 
@@ -67,7 +65,7 @@ public class BoardDAO {
 		try {
 			conn = ConnUtil.getConnection();
 			pstmt = conn.prepareStatement(
-					"select * from (select rownum rnum, num, writer, email, subject,pass, regdate, readcount, ref, step, depth, content,ip from (select *from board order by ref desc, step asc)) where rnum>=? andrnum<=?");
+					"select * from (select rownum rnum, num, writer, email, subject,pass, regdate, readcount, ref, step, depth, content,ip from (select *from board order by ref desc, step asc)) where rnum>=? and rnum<=?");
 			pstmt.setInt(1, start);
 			pstmt.setInt(2, end);
 			rs = pstmt.executeQuery();
@@ -88,6 +86,7 @@ public class BoardDAO {
 					article.setContent(rs.getString("content"));
 					article.setIp(rs.getString("ip"));
 					articleList.add(article);
+					System.out.println(rs.getString("email"));
 				} while (rs.next());
 			}
 		} catch (
@@ -174,4 +173,198 @@ public class BoardDAO {
 				}
 		}
 	}
+
+	public BoardVO getArticle(int num) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		BoardVO article = null;
+		try {
+			conn = ConnUtil.getConnection();
+			pstmt = conn.prepareStatement("update board set readcount=readcount+1 where num =?");
+			pstmt.setInt(1, num);
+			pstmt.executeUpdate();
+			pstmt = conn.prepareStatement("select * from board where num = ?");
+			pstmt.setInt(1, num);
+			rs = pstmt.executeQuery();
+			if (rs.next()) {
+				article = new BoardVO();
+				article.setNum(rs.getInt("num"));
+				article.setWriter(rs.getString("writer"));
+				article.setEmail(rs.getString("email"));
+				article.setSubject(rs.getString("subject"));
+				article.setPass(rs.getString("pass"));
+				article.setRegdate(rs.getTimestamp("regdate"));
+				article.setReadcount(rs.getInt("readcount"));
+				article.setRef(rs.getInt("ref"));
+				article.setStep(rs.getInt("step"));
+				article.setDepth(rs.getInt("depth"));
+				article.setContent(rs.getString("content"));
+				article.setIp(rs.getString("ip"));
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+
+		} finally {
+			if (rs != null)
+				try {
+					rs.close();
+				} catch (SQLException ex) {
+				}
+			if (pstmt != null)
+				try {
+					pstmt.close();
+				} catch (SQLException ex) {
+				}
+			if (conn != null)
+				try {
+					conn.close();
+				} catch (SQLException ex) {
+				}
+		}
+
+		return article;
+	}
+
+	public BoardVO updateGetArticle(int num) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		BoardVO article = null;
+		try {
+			conn = ConnUtil.getConnection();
+			pstmt = conn.prepareStatement("select * from board where num = ?");
+			pstmt.setInt(1, num);
+			rs = pstmt.executeQuery();
+			if (rs.next()) {
+				article = new BoardVO();
+				article.setNum(rs.getInt("num"));
+				article.setWriter(rs.getString("writer"));
+				article.setEmail(rs.getString("email"));
+				article.setSubject(rs.getString("subject"));
+				article.setPass(rs.getString("pass"));
+				article.setRegdate(rs.getTimestamp("regdate"));
+				article.setReadcount(rs.getInt("readcount"));
+				article.setRef(rs.getInt("ref"));
+				article.setStep(rs.getInt("step"));
+				article.setDepth(rs.getInt("depth"));
+				article.setContent(rs.getString("content"));
+				article.setIp(rs.getString("ip"));
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			if (rs != null)
+				try {
+					rs.close();
+				} catch (SQLException ex) {
+				}
+			if (pstmt != null)
+				try {
+					pstmt.close();
+				} catch (SQLException ex) {
+				}
+			if (conn != null)
+				try {
+					conn.close();
+				} catch (SQLException ex) {
+				}
+		}
+		return article;
+	}
+
+	public int updateArticle(BoardVO article) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String dbpasswd = "";
+		String sql = "";
+		int result = -1;// 결과값
+		try {
+			conn = ConnUtil.getConnection();
+			pstmt = conn.prepareStatement("select pass from board where num = ?");
+			pstmt.setInt(1, article.getNum());
+			rs = pstmt.executeQuery();
+			if (rs.next()) {
+				dbpasswd = rs.getString("pass");// 비밀번호 비교
+				if (dbpasswd.equals(article.getPass())) {
+					sql = "update board set writer=?,email=?,subject=?";
+					sql += ",content=? where num=?";
+					pstmt = conn.prepareStatement(sql);
+					pstmt.setString(1, article.getWriter());
+					pstmt.setString(2, article.getEmail());
+					pstmt.setString(3, article.getSubject());
+					pstmt.setString(4, article.getContent());
+					pstmt.setInt(5, article.getNum());
+					pstmt.executeUpdate();
+					result = 1;// 수정성공
+				} else {
+					result = 0;// 수정실패
+				}
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			if (rs != null)
+				try {
+					rs.close();
+				} catch (SQLException ex) {
+				}
+			if (pstmt != null)
+				try {
+					pstmt.close();
+				} catch (SQLException ex) {
+				}
+			if (conn != null)
+				try {
+					conn.close();
+				} catch (SQLException ex) {
+				}
+		}
+		return result;
+	}
+
+	public int deleteArticle(int num, String pass) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String dbPass = "";
+		int result = -1;
+		try {
+			conn = ConnUtil.getConnection();
+			pstmt = conn.prepareStatement("select pass from board where num = ?");
+			pstmt.setInt(1, num);
+			rs = pstmt.executeQuery();
+			if (rs.next()) {
+				dbPass = rs.getString("pass");
+				if (dbPass.equals(pass)) {
+					pstmt = conn.prepareStatement("delete from board where num=?");
+					pstmt.setInt(1, num);
+					pstmt.executeUpdate();
+					result = 1; // 글삭제 성공
+				} else
+					result = 0; // 비밀번호 틀림
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			if (rs != null)
+				try {
+					rs.close();
+				} catch (SQLException ex) {
+				}
+			if (pstmt != null)
+				try {
+					pstmt.close();
+				} catch (SQLException ex) {
+				}
+			if (conn != null)
+				try {
+					conn.close();
+				} catch (SQLException ex) {
+				}
+		}
+		return result;
+	}
+
 }

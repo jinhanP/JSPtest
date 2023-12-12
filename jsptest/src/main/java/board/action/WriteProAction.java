@@ -11,7 +11,7 @@ import board.model.BoardDAO;
 public class WriteProAction implements CommandAction {
 
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		request.setCharacterEncoding("euc-kr");// 한글 인코딩
+		request.setCharacterEncoding("utf-8");// 한글 인코딩
 		BoardVO article = new BoardVO();// 데이터처리 빈
 		article.setNum(Integer.parseInt(request.getParameter("num")));
 		article.setWriter(request.getParameter("writer"));

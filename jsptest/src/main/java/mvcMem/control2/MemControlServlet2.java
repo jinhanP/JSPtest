@@ -34,7 +34,7 @@ public class MemControlServlet2 extends HttpServlet {
 			out.println("<head><title>Error</title></head>");
 			out.println("<body>");
 			out.println("<h4>올바른 요청이 아닙니다!</h4>");
-			out.println("<h4>http://localhost:8080/myWeb/mvcMem2/member2.mdo?cmd=요청키워드</h4>");
+			out.println("<h4>http://localhost:8080/jsptest/mvcMem2/member2.mdo?cmd=요청키워드</h4>");
 			out.println("</body>");
 			out.println("</html>");
 		}

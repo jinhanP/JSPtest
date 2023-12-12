@@ -54,9 +54,9 @@ public class ActionFactory {
 		case "idCheck":
 			action = new mvcMem.action2.IdCheckAction();
 			break;
-		case "zipCheck":
-			action = new mvcMem.action2.ZipCheckAction();
-			break;
+//		case "zipCheck":
+//			action = new mvcMem.action2.ZipCheckAction();
+//			break;
 		default:
 			action = new mvcMem.action2.IndexAction();
 			break;

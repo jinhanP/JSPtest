@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <script type="text/javascript" src="script.js?ver=1"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
 <title>수정폼</title>
 </head>
 <body>
@@ -46,22 +48,16 @@
 				<td align="right">이메일 :</td>
 				<td><input type="text" name="email" value="${email}" /></td>
 			</tr>
-			<tr>
-				<td align="right">우편번호 :</td>
-				<td><input type="text" name="zipcode" size="20"
-					value="${zipcode}" />&nbsp; <input type="button" value="찾기"
-					onClick="zipCheck()" /></td>
-			</tr>
-			<tr>
-				<td align="right">주소1 :</td>
-				<td><input type="text" name="address1" size="50"
-					value="${address1}" /></td>
-			</tr>
-			<tr>
-				<td align="right">주소2 :</td>
-				<td><input type="text" name="address2" size="30"
-					value="${address2}" /></td>
-			</tr>
+				<tr>
+			<td>
+			<p align="right">우편번호:</p><br />
+			<td>
+			<input type="text" id="sample6_address" placeholder="주소"size="30"><br /> 
+			<input type="text" id="sample6_detailAddress" placeholder="상세주소" size="30"><br />
+			<input type="text" id="sample6_extraAddress" placeholder="참고항목"size="30"><br /> 
+			<input type="text" id="sample6_postcode"placeholder="우편번호" size="30" />
+			<input type="button" onclick="sample6_execDaumPostcode()"value="찾기"></td>
+		</tr>
 			<tr>
 				<td colspan="2" align="center">
 				  <input type="button" value="정보수정" onClick="inputCheck()" />&nbsp;&nbsp; 
