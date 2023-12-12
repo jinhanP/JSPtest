@@ -1,84 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.security.Timestamp"/>
-    <fullyQualifiedTypeName name="java.sql.Timestamp"/>
-    <fullyQualifiedTypeName name="org.apache.catalina.authenticator.SpnegoAuthenticator.AcceptAction"/>
-    <fullyQualifiedTypeName name="mvc.action.IndexAction"/>
-    <fullyQualifiedTypeName name="java.lang.IllegalAccessError"/>
-    <fullyQualifiedTypeName name="mvc.control.ActionFactory"/>
-    <fullyQualifiedTypeName name="mvc.action.Action"/>
-    <fullyQualifiedTypeName name="jakarta.security.auth.message.callback.PrivateKeyCallback.Request"/>
+    <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
+    <fullyQualifiedTypeName name="javax.naming.NamingException"/>
+    <fullyQualifiedTypeName name="javax.swing.border.Border"/>
+    <fullyQualifiedTypeName name="board.model.BoardDAO"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.ServletConfig"/>
     <fullyQualifiedTypeName name="java.util.Properties"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
+    <fullyQualifiedTypeName name="java.lang.InstantiationError"/>
+    <fullyQualifiedTypeName name="java.lang.InstantiationException"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
-<<<<<<< HEAD
-    <fullyQualifiedTypeName name="mvcMem.control.ActionForward"/>
-=======
-    <fullyQualifiedTypeName name="mvcMem.control.ActionFactory"/>
-    <fullyQualifiedTypeName name="mvcMem.action.Action"/>
-    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
->>>>>>> 60a51d6 (no message)
+    <fullyQualifiedTypeName name="javax.smartcardio.CommandAPDU"/>
+    <fullyQualifiedTypeName name="java.lang.Throwable"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.ServletConfig"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.ServletException"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
-    <fullyQualifiedTypeName name="javax.naming.Context"/>
-    <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
-    <fullyQualifiedTypeName name="javax.naming.NamingException"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.jsp.jstl.sql.Result"/>
-    <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-<<<<<<< HEAD
-    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
-    <fullyQualifiedTypeName name="mvcMem.action2.IndexAction"/>
-    <fullyQualifiedTypeName name="mvcMem.action.IndexAction"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.sql.Array"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="board.model.ConnUti"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.sql.Timestamp"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletResponse"/>
-    <fullyQualifiedTypeName name="mvcMem.control2.MemControlServlet2"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.ServletException"/>
-    <fullyQualifiedTypeName name="mvcMem.action.LoginFormAction"/>
-    <fullyQualifiedTypeName name="mvcMem.control2.ActionForward"/>
-    <fullyQualifiedTypeName name="mvcMem.model2.ZipCodeVO"/>
-    <fullyQualifiedTypeName name="java.util.Vector"/>
-    <fullyQualifiedTypeName name="mvcMem.model2.StudentVO"/>
-    <fullyQualifiedTypeName name="mvc.CommandProcess"/>
-    <fullyQualifiedTypeName name="mvcMem.control.ActionFactory"/>
-    <fullyQualifiedTypeName name="mvcMem.action.Action"/>
-    <fullyQualifiedTypeName name="mvcMem.control2.ActionFactory"/>
-    <fullyQualifiedTypeName name="mvcMem.action2.Action"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
-    <fullyQualifiedTypeName name="mvcMem.model2.StudentDAO"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
-=======
-    <fullyQualifiedTypeName name="memberone.StudentDAO"/>
-    <fullyQualifiedTypeName name="mvc.control.ActionForward"/>
-    <fullyQualifiedTypeName name="mvcMem.action.IndexAction"/>
-    <fullyQualifiedTypeName name="mvcMem.action.LoginFormAction"/>
-    <fullyQualifiedTypeName name="mvcMem.action.LoginProcAction"/>
-    <fullyQualifiedTypeName name="mvcMem.action.LogoutAction"/>
-    <fullyQualifiedTypeName name="mvcMem.action.RegFormAction"/>
-    <fullyQualifiedTypeName name="mvcMem.action.RegProcAction"/>
-    <fullyQualifiedTypeName name="mvcMem.action.ModifyFormAction"/>
-    <fullyQualifiedTypeName name="mvcMem.model.StudentVo"/>
-    <fullyQualifiedTypeName name="mvcMem.action.ModifyProcAction"/>
-    <fullyQualifiedTypeName name="mvcMem.action.DeleteFormAction"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
-    <fullyQualifiedTypeName name="mvcMem.action.DeleteProcAction"/>
-    <fullyQualifiedTypeName name="mvcMem.action.IdCheckAction"/>
-    <fullyQualifiedTypeName name="java.util.Vector"/>
-    <fullyQualifiedTypeName name="mvcMem.model.ZipCodeVO"/>
-    <fullyQualifiedTypeName name="mvcMem.action.ZipCheckAction"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.ServletException"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
-    <fullyQualifiedTypeName name="mvcMem.control.ActionForward"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletResponse"/>
-    <fullyQualifiedTypeName name="mvcMem.model.StudentDAO"/>
->>>>>>> 60a51d6 (no message)
 </qualifiedTypeNameHistroy>
