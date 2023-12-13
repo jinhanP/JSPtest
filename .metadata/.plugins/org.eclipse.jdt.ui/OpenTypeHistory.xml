@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
+<<<<<<< HEAD
     <typeInfo handle="=jsptest/src\/main\/java&lt;mvcMem.action2{Action.java[Action" modifiers="513" timestamp="1702264488341"/>
     <typeInfo handle="=jsptest/src\/main\/java&lt;board.action{CommandAction.java[CommandAction" modifiers="513" timestamp="1702339538717"/>
+=======
+    <typeInfo handle="=jsptest/src\/main\/java&lt;mvc{CommandProcess.java[CommandProcess" modifiers="513" timestamp="1702024918017"/>
+    <typeInfo handle="=jsptest/src\/main\/java&lt;mvc.action{Action.java[Action" modifiers="513" timestamp="1702021071269"/>
+>>>>>>> e284cb8809c5fffb58fcda3a52bd78770a34b1ca
 </typeInfoHistroy>

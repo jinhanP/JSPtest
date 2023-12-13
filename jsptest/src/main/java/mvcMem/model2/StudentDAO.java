@@ -10,7 +10,6 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-
 //싱글톤 방식
 public class StudentDAO {
 	private static StudentDAO instance = null;
@@ -166,7 +165,8 @@ public class StudentDAO {
 		ResultSet rs = null;
 		try {
 			conn = getConnection();
-			pstmt = conn.prepareStatement("update student set pass=?, phone1=?,phone2=?, phone3=?, email=?, where id=?");
+			pstmt = conn
+					.prepareStatement("update student set pass=?, phone1=?,phone2=?, phone3=?, email=?, where id=?");
 			pstmt.setString(1, vo.getPass());
 			pstmt.setString(2, vo.getPhone1());
 			pstmt.setString(3, vo.getPhone2());
@@ -177,16 +177,28 @@ public class StudentDAO {
 //			pstmt.setString(8, vo.getAddress2());
 			pstmt.setString(9, vo.getId());
 			if (pstmt.executeUpdate() > 0)
-			result = true;
-			} catch (SQLException e) {
+				result = true;
+		} catch (SQLException e) {
 			e.printStackTrace();
-			} finally {
-			 if (rs != null) try { rs.close(); } catch (SQLException sqle1) {}
-			 if (pstmt != null) try { pstmt.close();} catch (SQLException sqle2) { }
-			 if (conn != null) try { conn.close(); } catch (SQLException sqle3) { }
-			}
-			return result;
-			 }
+		} finally {
+			if (rs != null)
+				try {
+					rs.close();
+				} catch (SQLException sqle1) {
+				}
+			if (pstmt != null)
+				try {
+					pstmt.close();
+				} catch (SQLException sqle2) {
+				}
+			if (conn != null)
+				try {
+					conn.close();
+				} catch (SQLException sqle3) {
+				}
+		}
+		return result;
+	}
 
 	public int loginCheck(String id, String pass) {
 		int result = 2;
